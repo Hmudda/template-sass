@@ -1225,9 +1225,9 @@
     max-width: 80rem;
     margin: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     /* 60px - 180px */
     gap: clamp(3.75rem, 13vw, 11.25rem);
   }
@@ -1244,11 +1244,11 @@
   #hero-1619 .cs-topper {
     /* 13px - 16px */
     font-size: clamp(0.8125rem, 1.5vw, 1rem);
-    line-height: 1.2em;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    line-height: 1.2em;
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: 0.1em;
     margin-bottom: 0.25rem;
     color: var(--primary);
     display: flex;
@@ -1286,13 +1286,13 @@
   }
   #hero-1619 .cs-button-solid {
     font-size: 1rem;
+    font-weight: 700;
     /* 46px - 56px */
     line-height: clamp(2.875rem, 5.5vw, 3.5rem);
     text-decoration: none;
-    font-weight: 700;
     margin: 0;
-    color: #fff;
     padding: 0 1.5rem;
+    color: #fff;
     background-color: var(--primary);
     display: inline-block;
     position: relative;
@@ -1300,12 +1300,12 @@
   }
   #hero-1619 .cs-button-solid:before {
     content: "";
-    position: absolute;
-    display: block;
-    height: 100%;
     width: 0%;
+    height: 100%;
     background: #000;
     opacity: 1;
+    display: block;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
@@ -1315,31 +1315,31 @@
     width: 100%;
   }
   #hero-1619 .cs-card-group {
+    width: 100%;
     margin: 0;
     padding: 0;
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     /* 16px - 20px */
     gap: clamp(1rem, 2.3vw, 1.25rem);
   }
   #hero-1619 .cs-item {
-    width: 100%;
     text-align: left;
     list-style: none;
+    width: 100%;
     margin: 0;
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
     /* 24px - 32px */
     padding: clamp(1.5rem, 3vw, 2rem);
     background-color: #fff;
     box-shadow: 0px 12px 80px 0px rgba(26, 26, 26, 0.08);
-    /* prevents padding from affecting height and width */
-    box-sizing: border-box;
-    grid-column: span 12;
-    grid-row: span 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
+    align-items: flex-start;
+    grid-column: span 12;
+    grid-row: span 1;
     position: relative;
     z-index: 1;
   }
@@ -1351,8 +1351,8 @@
   #hero-1619 .cs-h3 {
     /* 20px - 25px */
     font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
-    line-height: 1.2em;
     font-weight: bold;
+    line-height: 1.2em;
     text-align: inherit;
     margin: 0 0 1rem 0;
     color: var(--headerColor);
@@ -1382,8 +1382,8 @@
     height: 100%;
     background: #111926;
     opacity: 0.8;
-    position: absolute;
     display: block;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
@@ -1391,14 +1391,14 @@
     pointer-events: none;
   }
   #hero-1619 .cs-background img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
     width: 100%;
+    height: 100%;
     object-fit: cover;
     /* makes the top of the image start at the top of the parent */
     object-position: top;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 /* Tablet - 768px */
@@ -1443,6 +1443,28 @@
   }
   #hero-1619 .cs-background img {
     display: none;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #hero-1619 .cs-item {
+    background-color: var(--medium);
+  }
+  body.dark-mode #hero-1619 .cs-h3,
+  body.dark-mode #hero-1619 .cs-item-text {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #hero-1619 .cs-icon {
+    filter: grayscale(1) brightness(1000%);
+  }
+  body.dark-mode #hero-1619 .cs-text {
+    opacity: 0.8;
+  }
+  body.dark-mode #hero-1619 .cs-background {
+    background-color: #000;
+  }
+  body.dark-mode #hero-1619 .cs-background img {
+    opacity: 0.5;
   }
 }
 
