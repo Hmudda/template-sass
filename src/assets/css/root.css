@@ -309,7 +309,7 @@
   }
   #cs-navigation .cs-logo {
     width: 40%;
-    max-width: 9.125rem;
+    max-width: 17.125rem;
     height: 100%;
     margin: 0 auto 0 0;
     /* prevents padding from affecting height and width */
@@ -493,7 +493,8 @@
   }
   body.dark-mode #cs-navigation .cs-logo {
     /* makes it white */
-    filter: grayscale(1) brightness(1000%);
+    /* filter: grayscale(1) brightness(1000%); */
+    filter: invert(1);
   }
   body.dark-mode #cs-navigation .cs-line {
     background-color: #fff;
@@ -720,8 +721,10 @@
     display: none;
   }
   #cs-navigation .cs-logo {
-    width: 18.4%;
-    max-width: 21.875rem;
+    /* width: 18.4%; */
+    width: 40%;
+    max-width: 17.125rem;
+    /* max-width: 21.875rem; */
     height: 4.0625rem;
     /* margin-right auto pushes everything away from it to the right */
     margin: 0 auto 0 0;
@@ -790,7 +793,8 @@
   }
   body.dark-mode #cs-navigation .cs-logo {
     /* makes it turn white */
-    filter: grayscale(1) brightness(1000%);
+    filter: invert(1);
+    /* filter: grayscale(1) brightness(1000%); */
   }
   body.dark-mode #cs-navigation .cs-li-link {
     color: var(--bodyTextColorWhite);
